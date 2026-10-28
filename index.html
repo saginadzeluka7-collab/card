@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Delicious Apples</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="wrap">
+        <div class="panel">
+
+            <!-- Image card -->
+            <div class="gallery">
+                <div class="gallery__main">
+                    <img src="./assets/image.png" alt="Green apple with a slice">
+                    <button class="icon icon--share" aria-label="Share">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="#fff" stroke="#fff" stroke-width="2"
+                            stroke-linecap="round">
+                            <circle cx="18" cy="5" r="3" />
+                            <circle cx="6" cy="12" r="3" />
+                            <circle cx="18" cy="19" r="3" />
+                            <path d="M8.6 10.5l6.8-4M8.6 13.5l6.8 4" fill="none" />
+                        </svg>
+                    </button>
+                    <button class="icon icon--heart" id="heart" aria-label="Favorite">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="2"
+                            stroke-linejoin="round">
+                            <path
+                                d="M12 20.5C5 15.5 3 12.5 3 9.5A4.5 4.5 0 0 1 12 7.5 4.5 4.5 0 0 1 21 9.5c0 3-2 6-9 11z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="thumbs" id="thumbs">
+                    <button class="thumb active"><img src="./assets/thumb1 (1).jpg" alt=""></button>
+                    <button class="thumb"><img src="./assets/thumb2.jpg" alt=""></button>
+                    <button class="thumb"><img src="./assets/thumb3.jpg" alt=""></button>
+                    <button class="thumb"><img src="./assets/thumb4.jpg" alt=""></button>
+                </div>
+            </div>
+
+            <!-- Product info -->
+            <section class="info">
+                <h1 class="title">Delicious Apples</h1>
+                <p class="code">COD: 45999</p>
+
+                <p class="price"><small>R$</small> 7.93</p>
+
+                <p class="label">Select a color</p>
+                <div class="colors" id="colors">
+                    <button class="color active" style="--c:radial-gradient(circle at 35% 30%,#d8f06a,#6bbf2a)"
+                        aria-label="Green"></button>
+                    <button class="color" style="--c:radial-gradient(circle at 35% 30%,#fff48a,#e8b800)"
+                        aria-label="Yellow"></button>
+                    <button class="color" style="--c:radial-gradient(circle at 35% 30%,#ffb199,#c92a1c)"
+                        aria-label="Red"></button>
+                    <button class="color" style="--c:radial-gradient(circle at 35% 30%,#ff8a7a,#d41414)"
+                        aria-label="Dark red"></button>
+                </div>
+
+                <p class="label">Benefits</p>
+                <ul class="benefits">
+                    <li>Apples are nutricious</li>
+                    <li>Apples may be good for weight loss</li>
+                    <li>Apples may be good for bone health</li>
+                    <li>They're linked to a lowest risk of diabetes</li>
+                </ul>
+
+                <button class="cart">Add to cart</button>
+            </section>
+        </div>
+
+        <p class="credit">Design from <a href="https://dribbble.com" target="_blank" rel="noopener">dribbble shot</a> of
+            <a href="https://dribbble.com" target="_blank" rel="noopener">Rodrigo Ramos</a>
+        </p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

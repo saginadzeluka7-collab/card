@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #01e37f;
+    font-family: "Raleway", Arial, sans-serif;
+    color: #444;
+}
+
+.wrap {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 16px;
+}
+
+.panel {
+    position: relative;
+    display: flex;
+    gap: 36px;
+    width: 100%;
+    max-width: 580px;
+    padding: 50px 40px 50px 275px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* Image card (sticks out of the white panel on the left) */
+.gallery {
+    position: absolute;
+    top: 36px;
+    left: -34px;
+    width: 250px;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.gallery__main {
+    position: relative;
+    height: 320px;
+    background: #a1e315;
+}
+
+.gallery__main img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.icon {
+    position: absolute;
+    top: 12px;
+    padding: 0;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.icon--share {
+    left: 12px;
+}
+
+.icon--heart {
+    right: 12px;
+}
+
+.icon--heart.liked svg {
+    fill: #fff;
+}
+
+.thumbs {
+    display: flex;
+    gap: 8px;
+    padding: 10px 10px 12px;
+}
+
+.thumb {
+    flex: 1;
+    padding: 3px;
+    background: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.thumb img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.thumb.active,
+.thumb:hover {
+    border-color: #888;
+}
+
+/* Info */
+.info {
+    flex: 1;
+}
+
+.title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 800;
+    color: #444;
+}
+
+.code {
+    margin: 2px 0 0;
+    font-size: 9px;
+    color: #999;
+}
+
+.price {
+    margin: 28px 0 24px;
+    font-size: 46px;
+    font-weight: 400;
+    color: #ff4343;
+}
+
+.price small {
+    font-size: 18px;
+}
+
+.label {
+    margin: 0 0 10px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #aaa;
+}
+
+.colors {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 26px;
+}
+
+.color {
+    width: 26px;
+    height: 26px;
+    padding: 3px;
+    background: var(--c);
+    background-clip: content-box;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.color.active {
+    border-radius: 4px;
+    border-color: #bbb;
+}
+
+.benefits {
+    margin: 0 0 30px;
+    padding-left: 18px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #333;
+}
+
+.cart {
+    padding: 18px 28px;
+    font: 700 12px "Raleway", Arial, sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    background: #ff4343;
+    border: 0;
+    border-radius: 6px;
+    box-shadow: 0 8px 14px rgba(255, 67, 67, 0.45);
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+
+.cart:hover {
+    transform: translateY(-2px);
+}
+
+.credit {
+    margin: 0;
+    font-size: 13px;
+    color: #fff;
+}
+
+.credit a {
+    color: #fff;
+}
+
+@media (max-width: 760px) {
+    .panel {
+        flex-direction: column;
+        padding: 300px 24px 40px;
+        max-width: 360px;
+    }
+
+    .gallery {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -20px;
+    }
+}
